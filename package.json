@@ -1,29 +1,32 @@
 {
-  "name": "frappe-ui-test-yarn-typescript",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "frappe-ui": "0.1.261",
-    "vue": "^3.5.32",
-    "vue-router": "^4"
-  },
-  "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^24.12.2",
-    "@vitejs/plugin-vue": "^6.0.6",
-    "@vue/tsconfig": "^0.9.1",
-    "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.10",
-    "prettier": "^3.8.3",
-    "tailwindcss": "^3",
-    "typescript": "~6.0.2",
-    "vite": "^8.0.10",
-    "vue-tsc": "^3.2.7"
-  }
+    "name": "frappe-ui-test-yarn-typescript",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview",
+        "postinstall": "patch-package"
+    },
+    "dependencies": {
+        "frappe-ui": "^0.1.277",
+        "vue": "^3.5.32",
+        "vue-router": "^4"
+    },
+    "devDependencies": {
+        "@meeg/vite-plugin-inspect-config": "^0.2.0",
+        "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+        "@types/node": "^24.12.2",
+        "@vitejs/plugin-vue": "^6.0.6",
+        "@vue/tsconfig": "^0.9.1",
+        "autoprefixer": "^10.5.0",
+        "postcss": "^8.5.10",
+        "patch-package": "^8.0.1",
+        "prettier": "^3.8.3",
+        "tailwindcss": "^3",
+        "typescript": "~6.0.2",
+        "vite": "^8.0.10",
+        "vue-tsc": "^3.2.7"
+    }
 }

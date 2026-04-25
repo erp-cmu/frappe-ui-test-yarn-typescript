@@ -1,0 +1,41 @@
+diff --git a/node_modules/frappe-ui/vite/utils.js b/node_modules/frappe-ui/vite/utils.js
+index 7fd8a54..7520647 100644
+--- a/node_modules/frappe-ui/vite/utils.js
++++ b/node_modules/frappe-ui/vite/utils.js
+@@ -24,14 +24,18 @@ export function getCommonSiteConfig() {
+ 
+ export function findBenchPath() {
+   let currentDir = path.resolve('.')
+-  while (currentDir !== '/') {
++  while (true) {
+     if (
+       fs.existsSync(path.join(currentDir, 'sites')) &&
+       fs.existsSync(path.join(currentDir, 'apps'))
+     ) {
+       return currentDir
+     }
+-    currentDir = path.resolve(currentDir, '..')
++    const parentDir = path.resolve(currentDir, '..')
++    if (parentDir === currentDir) {
++      break
++    }
++    currentDir = parentDir
+   }
+   return null
+ }
+@@ -53,11 +57,14 @@ export function findAppName() {
+ 
+   // Walk up from cwd until we find a directory whose parent is the apps folder
+   let currentDir = path.resolve('.')
+-  while (currentDir !== '/') {
++  while (true) {
+     const parent = path.dirname(currentDir)
+     if (path.resolve(parent) === path.resolve(appsFolder)) {
+       return path.basename(currentDir)
+     }
++    if (parent === currentDir) {
++      break
++    }
+     currentDir = parent
+   }
+ 

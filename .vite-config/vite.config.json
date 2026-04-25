@@ -1,0 +1,1027 @@
+{
+  "resolve": {
+    "externalConditions": [
+      "node",
+      "module-sync"
+    ],
+    "extensions": [
+      ".mjs",
+      ".js",
+      ".mts",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".json"
+    ],
+    "dedupe": [
+      "vue"
+    ],
+    "noExternal": [],
+    "external": [],
+    "preserveSymlinks": false,
+    "tsconfigPaths": false,
+    "alias": [
+      {
+        "find": {},
+        "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/env.mjs"
+      },
+      {
+        "find": {},
+        "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/client.mjs"
+      }
+    ],
+    "mainFields": [
+      "browser",
+      "module",
+      "jsnext:main",
+      "jsnext"
+    ],
+    "conditions": [
+      "module",
+      "browser",
+      "development|production"
+    ],
+    "builtins": []
+  },
+  "plugins": [
+    {
+      "name": "vite:optimized-deps"
+    },
+    {
+      "name": "vite:watch-package-data"
+    },
+    {
+      "name": "vite:pre-alias"
+    },
+    {
+      "name": "alias"
+    },
+    {
+      "name": "vite:modulepreload-polyfill",
+      "resolveId": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "load": {
+        "filter": {
+          "id": {}
+        }
+      }
+    },
+    {
+      "name": "vite:resolve-dev",
+      "resolveId": {
+        "filter": {
+          "id": {
+            "exclude": [
+              {},
+              {},
+              {},
+              {}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "vite:resolve-builtin:get-environment",
+      "perEnvironmentStartEndDuringDev": true
+    },
+    {
+      "name": "vite:resolve-builtin"
+    },
+    {
+      "name": "vite:html-inline-proxy",
+      "resolveId": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "load": {
+        "filter": {
+          "id": {}
+        }
+      }
+    },
+    {
+      "name": "vite:css",
+      "load": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "transform": {
+        "filter": {
+          "id": {
+            "include": {},
+            "exclude": [
+              {},
+              {}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "builtin:oxc-runtime",
+      "load": {
+        "order": "pre"
+      },
+      "resolveId": {
+        "order": "pre"
+      }
+    },
+    {
+      "name": "vite:oxc"
+    },
+    {
+      "name": "builtin:vite-json",
+      "_options": {
+        "namedExports": true,
+        "stringify": "auto",
+        "minify": false
+      }
+    },
+    {
+      "name": "vite:wasm-helper"
+    },
+    {
+      "name": "vite:worker",
+      "load": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "transform": {
+        "filter": {
+          "id": {}
+        }
+      }
+    },
+    {
+      "name": "vite:asset",
+      "perEnvironmentStartEndDuringDev": true,
+      "resolveId": {
+        "filter": {
+          "id": [
+            {},
+            {}
+          ]
+        }
+      },
+      "load": {
+        "filter": {
+          "id": {
+            "include": [
+              {},
+              {},
+              {}
+            ],
+            "exclude": {}
+          }
+        }
+      }
+    },
+    {
+      "name": "vite:vue",
+      "api": {
+        "options": {
+          "isProduction": false,
+          "compiler": null,
+          "customElement": {},
+          "root": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript",
+          "sourceMap": true,
+          "cssDevSourcemap": false,
+          "devToolsEnabled": true
+        },
+        "include": {},
+        "version": "6.0.6"
+      },
+      "resolveId": {
+        "filter": {
+          "id": [
+            {},
+            {}
+          ]
+        }
+      },
+      "load": {
+        "filter": {
+          "id": [
+            {},
+            {}
+          ]
+        }
+      },
+      "transform": {}
+    },
+    {
+      "name": "frappe-ui-lucide-icons"
+    },
+    {
+      "name": "frappeui-proxy-plugin"
+    },
+    {
+      "name": "frappeui-types-plugin"
+    },
+    {
+      "name": "frappeui-jinja-boot-data-plugin"
+    },
+    {
+      "name": "frappeui-optimize-deps"
+    },
+    {
+      "name": "inspect-config"
+    },
+    {
+      "name": "builtin:vite-wasm-fallback"
+    },
+    {
+      "name": "vite:define",
+      "transform": {}
+    },
+    {
+      "name": "vite:css-post",
+      "transform": {
+        "filter": {
+          "id": {
+            "include": {},
+            "exclude": [
+              {},
+              {}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "transform": {
+        "filter": {
+          "code": {}
+        }
+      }
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "transform": {
+        "filter": {
+          "id": {
+            "exclude": [
+              {},
+              {}
+            ]
+          },
+          "code": {}
+        }
+      }
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "resolveId": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "load": {
+        "filter": {
+          "id": {}
+        }
+      },
+      "transform": {
+        "filter": {
+          "id": {
+            "exclude": {}
+          },
+          "code": {}
+        }
+      }
+    },
+    {
+      "name": "vite:import-glob",
+      "transform": {
+        "filter": {
+          "code": "import.meta.glob"
+        }
+      }
+    },
+    {
+      "name": "unplugin-auto-import",
+      "enforce": "post",
+      "transform": {
+        "filter": {
+          "id": {
+            "include": [
+              {},
+              {},
+              {},
+              {},
+              {},
+              {}
+            ],
+            "exclude": [
+              {},
+              {}
+            ]
+          }
+        }
+      },
+      "vite": {}
+    },
+    {
+      "name": "unplugin-vue-components",
+      "enforce": "post",
+      "api": {},
+      "vite": {}
+    },
+    {
+      "name": "vite:client-inject"
+    },
+    {
+      "name": "vite:css-analysis",
+      "transform": {
+        "filter": {
+          "id": {
+            "include": {},
+            "exclude": [
+              {},
+              {}
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "vite:import-analysis"
+    }
+  ],
+  "optimizeDeps": {
+    "include": [
+      "frappe-ui > feather-icons",
+      "debug",
+      "interactjs",
+      "highlight.js/lib/core",
+      "interactjs"
+    ],
+    "exclude": [],
+    "needsInterop": [],
+    "rolldownOptions": {
+      "resolve": {
+        "symlinks": true
+      },
+      "output": {
+        "topLevelVar": true
+      }
+    },
+    "extensions": [],
+    "holdUntilCrawlEnd": true,
+    "force": false,
+    "ignoreOutdatedRequests": false,
+    "noDiscovery": false,
+    "rollupOptions": {
+      "resolve": {
+        "symlinks": true
+      },
+      "output": {
+        "topLevelVar": true
+      }
+    },
+    "esbuildOptions": {
+      "preserveSymlinks": false
+    }
+  },
+  "server": {
+    "port": 8080,
+    "strictPort": false,
+    "allowedHosts": [],
+    "open": false,
+    "proxy": {
+      "^/(desk|app|login|api|assets|files|private)": {
+        "target": "http://127.0.0.1:8000",
+        "ws": true
+      }
+    },
+    "cors": {
+      "origin": {}
+    },
+    "headers": {},
+    "warmup": {
+      "clientFiles": [],
+      "ssrFiles": []
+    },
+    "middlewareMode": false,
+    "fs": {
+      "strict": true,
+      "deny": [
+        ".env",
+        ".env.*",
+        "*.{crt,pem}",
+        "**/.git/**"
+      ],
+      "allow": [
+        "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript"
+      ]
+    },
+    "preTransformRequests": true,
+    "perEnvironmentStartEndDuringDev": false,
+    "perEnvironmentWatchChangeDuringDev": false,
+    "forwardConsole": {
+      "enabled": false,
+      "unhandledErrors": false,
+      "logLevels": []
+    }
+  },
+  "experimental": {
+    "importGlobRestoreExtension": false,
+    "hmrPartialAccept": false,
+    "bundledDev": false
+  },
+  "build": {
+    "target": [
+      "chrome111",
+      "edge111",
+      "firefox114",
+      "safari16.4",
+      "ios16.4"
+    ],
+    "polyfillModulePreload": true,
+    "modulePreload": {
+      "polyfill": true
+    },
+    "outDir": "dist",
+    "assetsDir": "assets",
+    "assetsInlineLimit": 4096,
+    "sourcemap": false,
+    "terserOptions": {},
+    "rolldownOptions": {
+      "platform": "node"
+    },
+    "commonjsOptions": {
+      "include": [
+        {}
+      ],
+      "extensions": [
+        ".js",
+        ".cjs"
+      ]
+    },
+    "dynamicImportVarsOptions": {
+      "exclude": [
+        {}
+      ]
+    },
+    "write": true,
+    "emptyOutDir": null,
+    "copyPublicDir": true,
+    "license": false,
+    "manifest": false,
+    "lib": false,
+    "ssrManifest": false,
+    "ssrEmitAssets": false,
+    "reportCompressedSize": true,
+    "chunkSizeWarningLimit": 500,
+    "watch": null,
+    "cssCodeSplit": true,
+    "minify": "oxc",
+    "rollupOptions": {
+      "platform": "node"
+    },
+    "ssr": false,
+    "emitAssets": false,
+    "cssTarget": [
+      "chrome111",
+      "edge111",
+      "firefox114",
+      "safari16.4",
+      "ios16.4"
+    ],
+    "cssMinify": true
+  },
+  "worker": {
+    "format": "iife",
+    "rollupOptions": {},
+    "rolldownOptions": {}
+  },
+  "define": {
+    "__VUE_OPTIONS_API__": true,
+    "__VUE_PROD_DEVTOOLS__": false,
+    "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false
+  },
+  "ssr": {
+    "target": "node",
+    "optimizeDeps": {
+      "esbuildOptions": {
+        "preserveSymlinks": false
+      },
+      "include": [],
+      "exclude": [],
+      "needsInterop": [],
+      "rolldownOptions": {
+        "resolve": {
+          "symlinks": true
+        },
+        "output": {
+          "topLevelVar": true
+        }
+      },
+      "extensions": [],
+      "holdUntilCrawlEnd": true,
+      "force": false,
+      "ignoreOutdatedRequests": false,
+      "noDiscovery": true,
+      "rollupOptions": {
+        "resolve": {
+          "symlinks": true
+        },
+        "output": {
+          "topLevelVar": true
+        }
+      }
+    },
+    "external": [],
+    "noExternal": [],
+    "resolve": {
+      "conditions": [
+        "module",
+        "node",
+        "development|production"
+      ],
+      "externalConditions": [
+        "node",
+        "module-sync"
+      ]
+    }
+  },
+  "environments": {
+    "client": {
+      "define": {
+        "__VUE_OPTIONS_API__": true,
+        "__VUE_PROD_DEVTOOLS__": false,
+        "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false
+      },
+      "resolve": {
+        "externalConditions": [
+          "node",
+          "module-sync"
+        ],
+        "extensions": [
+          ".mjs",
+          ".js",
+          ".mts",
+          ".ts",
+          ".jsx",
+          ".tsx",
+          ".json"
+        ],
+        "dedupe": [
+          "vue"
+        ],
+        "noExternal": [],
+        "external": [],
+        "preserveSymlinks": false,
+        "tsconfigPaths": false,
+        "alias": [
+          {
+            "find": {},
+            "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/env.mjs"
+          },
+          {
+            "find": {},
+            "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/client.mjs"
+          }
+        ],
+        "mainFields": [
+          "browser",
+          "module",
+          "jsnext:main",
+          "jsnext"
+        ],
+        "conditions": [
+          "module",
+          "browser",
+          "development|production"
+        ],
+        "builtins": []
+      },
+      "keepProcessEnv": false,
+      "consumer": "client",
+      "optimizeDeps": {
+        "include": [
+          "frappe-ui > feather-icons",
+          "debug",
+          "interactjs",
+          "highlight.js/lib/core",
+          "interactjs"
+        ],
+        "exclude": [],
+        "needsInterop": [],
+        "rolldownOptions": {
+          "resolve": {
+            "symlinks": true
+          },
+          "output": {
+            "topLevelVar": true
+          }
+        },
+        "extensions": [],
+        "holdUntilCrawlEnd": true,
+        "force": false,
+        "ignoreOutdatedRequests": false,
+        "noDiscovery": false,
+        "rollupOptions": {
+          "resolve": {
+            "symlinks": true
+          },
+          "output": {
+            "topLevelVar": true
+          }
+        },
+        "esbuildOptions": {
+          "preserveSymlinks": false
+        }
+      },
+      "dev": {
+        "warmup": [],
+        "sourcemap": {
+          "js": true
+        },
+        "preTransformRequests": true,
+        "recoverable": true,
+        "moduleRunnerTransform": false
+      },
+      "build": {
+        "target": [
+          "chrome111",
+          "edge111",
+          "firefox114",
+          "safari16.4",
+          "ios16.4"
+        ],
+        "polyfillModulePreload": true,
+        "modulePreload": {
+          "polyfill": true
+        },
+        "outDir": "dist",
+        "assetsDir": "assets",
+        "assetsInlineLimit": 4096,
+        "sourcemap": false,
+        "terserOptions": {},
+        "rolldownOptions": {
+          "platform": "browser"
+        },
+        "commonjsOptions": {
+          "include": [
+            {}
+          ],
+          "extensions": [
+            ".js",
+            ".cjs"
+          ]
+        },
+        "dynamicImportVarsOptions": {
+          "exclude": [
+            {}
+          ]
+        },
+        "write": true,
+        "emptyOutDir": null,
+        "copyPublicDir": true,
+        "license": false,
+        "manifest": false,
+        "lib": false,
+        "ssrManifest": false,
+        "ssrEmitAssets": false,
+        "reportCompressedSize": true,
+        "chunkSizeWarningLimit": 500,
+        "watch": null,
+        "cssCodeSplit": true,
+        "minify": "oxc",
+        "rollupOptions": {
+          "platform": "browser"
+        },
+        "ssr": false,
+        "emitAssets": true,
+        "cssTarget": [
+          "chrome111",
+          "edge111",
+          "firefox114",
+          "safari16.4",
+          "ios16.4"
+        ],
+        "cssMinify": true
+      }
+    },
+    "ssr": {
+      "define": {
+        "__VUE_OPTIONS_API__": true,
+        "__VUE_PROD_DEVTOOLS__": false,
+        "__VUE_PROD_HYDRATION_MISMATCH_DETAILS__": false
+      },
+      "resolve": {
+        "externalConditions": [
+          "node",
+          "module-sync"
+        ],
+        "extensions": [
+          ".mjs",
+          ".js",
+          ".mts",
+          ".ts",
+          ".jsx",
+          ".tsx",
+          ".json"
+        ],
+        "dedupe": [
+          "vue"
+        ],
+        "noExternal": [],
+        "external": [],
+        "preserveSymlinks": false,
+        "tsconfigPaths": false,
+        "alias": [
+          {
+            "find": {},
+            "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/env.mjs"
+          },
+          {
+            "find": {},
+            "replacement": "/@fs/C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/vite/dist/client/client.mjs"
+          }
+        ],
+        "mainFields": [
+          "module",
+          "jsnext:main",
+          "jsnext"
+        ],
+        "conditions": [
+          "module",
+          "node",
+          "development|production"
+        ],
+        "builtins": [
+          "_http_agent",
+          "_http_client",
+          "_http_common",
+          "_http_incoming",
+          "_http_outgoing",
+          "_http_server",
+          "_stream_duplex",
+          "_stream_passthrough",
+          "_stream_readable",
+          "_stream_transform",
+          "_stream_wrap",
+          "_stream_writable",
+          "_tls_common",
+          "_tls_wrap",
+          "assert",
+          "assert/strict",
+          "async_hooks",
+          "buffer",
+          "child_process",
+          "cluster",
+          "console",
+          "constants",
+          "crypto",
+          "dgram",
+          "diagnostics_channel",
+          "dns",
+          "dns/promises",
+          "domain",
+          "events",
+          "fs",
+          "fs/promises",
+          "http",
+          "http2",
+          "https",
+          "inspector",
+          "inspector/promises",
+          "module",
+          "net",
+          "os",
+          "path",
+          "path/posix",
+          "path/win32",
+          "perf_hooks",
+          "process",
+          "punycode",
+          "querystring",
+          "readline",
+          "readline/promises",
+          "repl",
+          "stream",
+          "stream/consumers",
+          "stream/promises",
+          "stream/web",
+          "string_decoder",
+          "sys",
+          "timers",
+          "timers/promises",
+          "tls",
+          "trace_events",
+          "tty",
+          "url",
+          "util",
+          "util/types",
+          "v8",
+          "vm",
+          "wasi",
+          "worker_threads",
+          "zlib",
+          {},
+          {}
+        ]
+      },
+      "keepProcessEnv": true,
+      "consumer": "server",
+      "optimizeDeps": {
+        "include": [],
+        "exclude": [],
+        "needsInterop": [],
+        "rolldownOptions": {
+          "resolve": {
+            "symlinks": true
+          },
+          "output": {
+            "topLevelVar": true
+          }
+        },
+        "extensions": [],
+        "holdUntilCrawlEnd": true,
+        "force": false,
+        "ignoreOutdatedRequests": false,
+        "noDiscovery": true,
+        "rollupOptions": {
+          "resolve": {
+            "symlinks": true
+          },
+          "output": {
+            "topLevelVar": true
+          }
+        },
+        "esbuildOptions": {
+          "preserveSymlinks": false
+        }
+      },
+      "dev": {
+        "warmup": [],
+        "sourcemap": {
+          "js": true
+        },
+        "preTransformRequests": false,
+        "recoverable": false,
+        "moduleRunnerTransform": true
+      },
+      "build": {
+        "target": [
+          "chrome111",
+          "edge111",
+          "firefox114",
+          "safari16.4",
+          "ios16.4"
+        ],
+        "polyfillModulePreload": true,
+        "modulePreload": {
+          "polyfill": true
+        },
+        "outDir": "dist",
+        "assetsDir": "assets",
+        "assetsInlineLimit": 4096,
+        "sourcemap": false,
+        "terserOptions": {},
+        "rolldownOptions": {
+          "platform": "node"
+        },
+        "commonjsOptions": {
+          "include": [
+            {}
+          ],
+          "extensions": [
+            ".js",
+            ".cjs"
+          ]
+        },
+        "dynamicImportVarsOptions": {
+          "exclude": [
+            {}
+          ]
+        },
+        "write": true,
+        "emptyOutDir": null,
+        "copyPublicDir": true,
+        "license": false,
+        "manifest": false,
+        "lib": false,
+        "ssrManifest": false,
+        "ssrEmitAssets": false,
+        "reportCompressedSize": true,
+        "chunkSizeWarningLimit": 500,
+        "watch": null,
+        "cssCodeSplit": true,
+        "minify": false,
+        "rollupOptions": {
+          "platform": "node"
+        },
+        "ssr": true,
+        "emitAssets": false,
+        "cssTarget": [
+          "chrome111",
+          "edge111",
+          "firefox114",
+          "safari16.4",
+          "ios16.4"
+        ],
+        "cssMinify": "lightningcss"
+      }
+    }
+  },
+  "configFile": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/vite.config.ts",
+  "configFileDependencies": [
+    "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/vite.config.ts"
+  ],
+  "inlineConfig": {
+    "server": {},
+    "experimental": {},
+    "build": {},
+    "worker": {},
+    "optimizeDeps": {}
+  },
+  "root": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript",
+  "base": "/",
+  "decodedBase": "/",
+  "rawBase": "/",
+  "publicDir": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/public",
+  "cacheDir": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript/node_modules/.vite",
+  "command": "serve",
+  "mode": "development",
+  "isBundled": false,
+  "isWorker": false,
+  "mainConfig": null,
+  "bundleChain": [],
+  "isProduction": false,
+  "css": {
+    "transformer": "postcss",
+    "preprocessorMaxWorkers": true,
+    "devSourcemap": false
+  },
+  "json": {
+    "namedExports": true,
+    "stringify": "auto"
+  },
+  "esbuild": {
+    "jsxDev": true,
+    "charset": "utf8",
+    "legalComments": "none"
+  },
+  "oxc": {
+    "jsx": {
+      "development": true
+    }
+  },
+  "preview": {
+    "port": 4173,
+    "strictPort": false,
+    "allowedHosts": [],
+    "open": false,
+    "proxy": {
+      "^/(desk|app|login|api|assets|files|private)": {
+        "target": "http://127.0.0.1:8000",
+        "ws": true
+      }
+    },
+    "cors": {
+      "origin": {}
+    },
+    "headers": {}
+  },
+  "envDir": "C:/Users/admin/Coding/erp/frappe-ui-test-yarn-typescript",
+  "env": {
+    "BASE_URL": "/",
+    "MODE": "development",
+    "DEV": true,
+    "PROD": false
+  },
+  "rawAssetsInclude": [],
+  "logger": {
+    "hasWarned": false
+  },
+  "packageCache": {},
+  "appType": "spa",
+  "dev": {
+    "warmup": [],
+    "sourcemap": {
+      "js": true
+    },
+    "preTransformRequests": false,
+    "recoverable": false,
+    "moduleRunnerTransform": false
+  },
+  "devtools": {
+    "config": {
+      "host": "localhost"
+    },
+    "enabled": false
+  },
+  "webSocketToken": "g_DzsD0O76zj",
+  "safeModulePaths": {}
+}
