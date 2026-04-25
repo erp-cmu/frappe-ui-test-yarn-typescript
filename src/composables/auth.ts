@@ -1,29 +1,22 @@
 import { useQuery } from '@tanstack/vue-query'
 
-async function callAuth() {
-    let headers = {
-        Accept: 'application/json',
-        'Content-Type': 'application/json; charset=utf-8',
-        'X-Frappe-Site-Name': window.location.hostname,
-    } as Record<string, string>
-
-    if (window.csrf_token && window.csrf_token !== '{{ csrf_token }}') {
-        headers['X-Frappe-CSRF-Token'] = window.csrf_token
-    }
-
-    const res = await fetch(`/api/method/frappe.auth.get_logged_user`, {
-        method: 'GET',
-        headers,
-        credentials: 'include',
-    })
-    return res.json()
-}
+import { httpRequestFactory } from '../utils/req'
 
 export function useAuth() {
-    const { isPending, isFetching, isError, data, error } = useQuery({
-        queryKey: ['todos'],
-        queryFn: callAuth,
+    const getLoggedUser = httpRequestFactory(
+        'GET',
+        '/api/method/frappe.auth.get_logged_user',
+        undefined,
+        true // noError is true because this endpoint will return a 403 if the user is not logged in, and we want to handle that gracefully without throwing an error.
+    )
+    const { data, isLoading, isError, error, refetch } = useQuery({
+        queryKey: ['loggedUser'],
+        queryFn: getLoggedUser,
+        select: (data) => {
+            return data?.message ?? null
+        },
+        retry: false, // Don't retry on failure, as it is probably due to the user not being logged in.
     })
-
-    console.log({ user: data })
+    // console.log({ data })
+    return { username: data, isLoading, isError, error, refetch }
 }

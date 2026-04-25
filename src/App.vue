@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Resource from './components/Resource.vue'
+import Home from './components/Home.vue'
+import Login from './components/Login.vue'
+import Nav from './components/Nav.vue'
 </script>
 
 <template>
-    <HelloWorld />
-    <Resource />
+    <Nav />
+    <Login />
+    <Home />
 </template>
