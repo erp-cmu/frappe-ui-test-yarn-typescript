@@ -1,3 +1,4 @@
+import { VueQueryPlugin } from '@tanstack/vue-query'
 import { FrappeUI } from 'frappe-ui'
 import { frappeRequest, setConfig } from 'frappe-ui'
 import { createApp } from 'vue'
@@ -7,5 +8,6 @@ import './style.css'
 
 setConfig('resourceFetcher', frappeRequest)
 let app = createApp(App)
+app.use(VueQueryPlugin)
 app.use(FrappeUI)
 app.mount('#app')

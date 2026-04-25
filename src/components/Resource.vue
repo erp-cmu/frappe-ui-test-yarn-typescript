@@ -5,7 +5,8 @@
 
 <script setup>
 import { createResource } from 'frappe-ui'
-
+import { useAuth } from '../composables/auth';
+useAuth()
 let todos = createResource({
     url: 'frappe.client.get_list',
     params: {
