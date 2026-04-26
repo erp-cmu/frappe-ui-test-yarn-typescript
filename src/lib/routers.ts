@@ -18,7 +18,7 @@ const routes = [
         },
     },
     {
-        path: '/signin',
+        path: '/signin', // Avoid using /login because it will redirect to frappe-site actual login page. This is probably due to frappe-ui plugin.
         components: {
             default: Login,
             nav: Nav,
