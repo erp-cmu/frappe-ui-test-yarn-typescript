@@ -212,6 +212,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@jspreadsheet-ce/vue@5":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@jspreadsheet-ce/vue/-/vue-5.0.1.tgz#8bc411d3cb873145cac095e6cc7be2996b3af382"
+  integrity sha512-FTqFV300iFfFLTmGw578Y8TK/e9VDjb+A/wsJ8rVCuUdAk/Rm7AaUuXMZcF7GOxjdxWUJPZzSTjbTm1v1IbnzA==
+  dependencies:
+    jspreadsheet-ce "^5.0.1"
+
+"@jspreadsheet/formula@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@jspreadsheet/formula/-/formula-2.0.2.tgz#e0529f275c086fd7d34179b50450a98aeb56fd58"
+  integrity sha512-PDQYf9REQA53I7tVYkvkeyQxrd5jcjUeHgItYnRpjN2QiIQwawSqBDtGGEVQTSboTG+JwgGCuhvOpj7FxeKwew==
+
 "@juggle/resize-observer@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
@@ -1686,6 +1698,19 @@ jsonify@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.1.tgz#2aa3111dae3d34a0f151c63f3a45d995d9420978"
   integrity sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==
+
+jspreadsheet-ce@^5.0.1:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/jspreadsheet-ce/-/jspreadsheet-ce-5.0.4.tgz#e2794403baf3cd61930d8503c1b87798f6065499"
+  integrity sha512-ra1JI1n+tEGgRMzTzNkPZjG0HZz8W6bFGAiTiHl+eYarXdRmS5qDc/ua3l2ev7oZ6Og9kjfrXYHVLUWiVc308w==
+  dependencies:
+    "@jspreadsheet/formula" "^2.0.2"
+    jsuites "^5.12.0"
+
+jsuites@^5.12.0:
+  version "5.13.5"
+  resolved "https://registry.yarnpkg.com/jsuites/-/jsuites-5.13.5.tgz#d9db6f8c4f0f716d96bd9d1c243e894a8f2e2407"
+  integrity sha512-cvkcpy/v5I3+IAcNPE4UP38PFCEfUQw9JI5NN61dlcXLwkD+2UTIOsRPvgMLeqI1eDWHL4AHfrbcE/+TFciUsw==
 
 klaw-sync@^6.0.0:
   version "6.0.0"
