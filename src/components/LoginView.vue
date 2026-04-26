@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useMutation } from '@tanstack/vue-query'
-import { Button } from 'frappe-ui'
-import { TextInput } from 'frappe-ui'
+import { Button, ErrorMessage, TextInput } from 'frappe-ui'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -10,6 +9,7 @@ import { httpRequestFactory } from '../utils/req'
 
 const username = ref('')
 const password = ref('')
+const errorMessage = ref('')
 
 const { refetch } = useAuth()
 const router = useRouter()
@@ -23,6 +23,7 @@ const { mutate, isPending } = useMutation({
     },
     onError: (error) => {
         console.error('Login failed', error)
+        errorMessage.value = 'Invalid username or password'
     },
 })
 </script>
@@ -43,5 +44,6 @@ const { mutate, isPending } = useMutation({
         >
             {{ isPending ? 'Logging in...' : 'Login' }}
         </Button>
+        <ErrorMessage v-if="errorMessage" :message="errorMessage" />
     </form>
 </template>

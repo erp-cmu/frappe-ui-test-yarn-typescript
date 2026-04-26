@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import { useMutation } from '@tanstack/vue-query'
 import { Badge, Button } from 'frappe-ui'
+import { useRouter } from 'vue-router'
 
 import { useAuth } from '../composables/auth'
 import { httpRequestFactory } from '../utils/req'
 
 const { username, refetch } = useAuth()
 
+const router = useRouter()
+
 const { mutate, isPending } = useMutation({
     mutationFn: () => httpRequestFactory('POST', '/api/method/logout')(),
     onSuccess: () => {
         console.log('Logout successful')
         refetch()
+        router.push('/')
     },
     onError: (error) => {
         console.error('Logout failed', error)

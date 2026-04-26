@@ -9,16 +9,17 @@ const getLoggedUserRequest = httpRequestFactory(
     true // noError is true because this endpoint will return a 403 if the user is not logged in, and we want to handle that gracefully without throwing an error.
 )
 
-export async function fetchLoggedUsername() {
-    const data = await getLoggedUserRequest()
-    return data?.message ?? null
-}
+// export async function fetchLoggedUsername() {
+//     const data = await getLoggedUserRequest()
+//     return data?.message ?? null
+// }
 
 export function useAuth() {
     const { data, isLoading, isError, error, refetch } = useQuery({
         queryKey: ['loggedUser'],
-        queryFn: fetchLoggedUsername,
+        queryFn: getLoggedUserRequest,
         retry: false, // Don't retry on failure, as it is probably due to the user not being logged in.
+        select: (data) => data?.message ?? null, // We only care about the username, which is in the message property. If message is not present, return null.
     })
     // console.log({ data })
     return { username: data, isLoading, isError, error, refetch }

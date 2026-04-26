@@ -1,12 +1,13 @@
+import { effectScope } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '../components/Dashboard.vue'
 import Footer from '../components/Footer.vue'
 import Home from '../components/HomeView.vue'
 import Login from '../components/LoginView.vue'
-import Nav from '../components/Nav.vue'
-import { fetchLoggedUsername } from '../composables/auth'
+import { useAuth } from '../composables/auth'
 import { BASE_URL } from '../utils/env'
+import Nav from './Nav.vue'
 
 const routes = [
     {
@@ -46,8 +47,14 @@ router.beforeEach(async (to) => {
         return true
     }
 
-    // TODO: We should ideally cache this value so that we don't have to make an API call on every route change. We can use something like Vue Query for this, but for now, we'll just fetch it every time.
-    const username = await fetchLoggedUsername()
+    // Create a new effect scope for this navigation guard to safely use composables without affecting the global scope.
+    const scope = effectScope()
+    const username = await scope.run(() => {
+        // Call your composable here
+        const { username } = useAuth()
+        return username.value
+    })
+    scope.stop() // Always stop the scope to prevent memory leaks
 
     if (!username) {
         return { path: '/signin' }
